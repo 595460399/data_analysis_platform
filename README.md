@@ -13,7 +13,7 @@
 ## 这些核心功能考虑效率和质量的最优解决方案是什么？
 
 ## 技术栈：
-### 后端Web框架：Python 3.6 + Django 3.0.8
+### 后端Web框架：Python 3.8 + Django 2.2
 ### 数据库：Mssql
 ### 数据处理：Pandas 1.0.5 + Numpy 1.19.0+mkl + 其他
 ### Javascript库: jQuery
