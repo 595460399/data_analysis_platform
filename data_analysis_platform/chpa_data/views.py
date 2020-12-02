@@ -10,7 +10,7 @@ from utils import sqlparser, statictical
 
 
 def index(request):
-    ENGINE = create_engine(os.path.join('sqlite:///', settings.BASE_DIR, 'db_sqlite3'))
+    ENGINE = create_engine('sqlite:///'+os.path.join(settings.BASE_DIR, 'db.sqlite3'))
     sql = sqlparser.sqlparse('test_data', 'MAT', 'Value', " [tc_3] = 'C09C ANGIOTENS-II ANTAG, PLAIN|血管紧张素II拮抗剂，单一用药'")
     df = pd.read_sql_query(sql, ENGINE)
 
