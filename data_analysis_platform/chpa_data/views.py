@@ -13,6 +13,7 @@ def index(request):
     ENGINE = create_engine(os.path.join('sqlite:///', settings.BASE_DIR, 'db_sqlite3'))
     sql = sqlparser.sqlparse('test_data', 'MAT', 'Value', " [tc_3] = 'C09C ANGIOTENS-II ANTAG, PLAIN|血管紧张素II拮抗剂，单一用药'")
     df = pd.read_sql_query(sql, ENGINE)
+
     pivoted = pd.pivot_table(df,
                              values='amount',  # 数据透视汇总值为AMOUNT字段，一般保持不变
                              index='date_time',  # 数据透视行为DATE字段，一般保持不变
